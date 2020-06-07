@@ -5,16 +5,42 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.dbvis</groupId>
-    <artifactId>docana1718</artifactId>
+    <artifactId>docana1819</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/Exercise1Test.java</exclude>
+                        <exclude>**/Exercise2Test.java</exclude>
+                        <exclude>**/Exercise3Test.java</exclude>
+                        <exclude>**/Exercise4Test.java</exclude>
+                        <exclude>**/Exercise5Test.java</exclude>
+                        <exclude>**/Exercise6Test.java</exclude>
+                        <exclude>**/Exercise7Test.java</exclude>
+                        <exclude>**/Exercise8Test.java</exclude>
+                        <exclude>**/Exercise9Test.java</exclude>
+                        <exclude>**/Exercise10Test.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
@@ -25,6 +51,96 @@
             <groupId>com.kennycason</groupId>
             <artifactId>kumo</artifactId>
             <version>1.8</version>
+        </dependency>
+        <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.1</version>
+    </dependency>
+        <dependency>
+            <groupId>org.knowm.xchart</groupId>
+            <artifactId>xchart</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.mintern</groupId>
+            <artifactId>primitive</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.8.0</version>
+            <classifier>models</classifier> <!--  will get the dependent model jars -->
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.adrianulbona</groupId>
+            <artifactId>hmm</artifactId>
+            <version>0.1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.opennlp</groupId>
+            <artifactId>opennlp-tools</artifactId>
+            <version>1.8.3</version>
+            <type>jar</type>
+        </dependency>
+        
+
+        <dependency>
+           <groupId>com.googlecode.json-simple</groupId>
+          <artifactId>json-simple</artifactId>
+           <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xalan</groupId>
+            <artifactId>xalan</artifactId>
+            <version>2.7.0</version>
+            <type>jar</type>
+
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/edu.mit/jwi -->
+        <dependency>
+            <groupId>edu.mit</groupId>
+            <artifactId>jwi</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
         </dependency>
     </dependencies>
 
